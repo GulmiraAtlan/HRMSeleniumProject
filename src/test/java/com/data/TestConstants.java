@@ -7,6 +7,8 @@ public class TestConstants {
         public static final String USERNAME = "Admin";
         public static final String PASSWORD = "admin123";
         public static final String INVALIDPASSWORD = "admin111";
+        public static final String EMPLOYEENAME = "Berna Smith";
+        public static final String NEWUSERNAME = "BernaSmith";
     }
 
 
