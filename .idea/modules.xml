@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HRMSeleniumProject.iml" filepath="$PROJECT_DIR$/.idea/HRMSeleniumProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HRMSelenium.iml" filepath="$PROJECT_DIR$/HRMSelenium.iml" />
     </modules>
   </component>
 </project>

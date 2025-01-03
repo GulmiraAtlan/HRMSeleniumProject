@@ -1,4 +1,4 @@
-package data;
+package com.data;
 
 public class TestConstants {
         public static final String BASE_URL = "https://opensource-demo.orangehrmlive.com/";
