@@ -1,32 +1,36 @@
 package com.end2endTests;
 
 import com.data.TestConstants;
+import com.base.BaseClass;
 import com.pages.LoginPage;
 import com.pages.AdminPage;
 import com.pages.HomePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AddNewUserTest {
-    private WebDriver driver;
+public class AddNewUserTest extends BaseClass{
     private LoginPage loginPage;
     private AdminPage adminPage;
     private HomePage homePage;
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
 
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        loginPage = new LoginPage(driver);
-        loginPage.openLoginPage(TestConstants.LOGIN_URL);
+        // Initialize WebDriver from BaseClass
+        setUp("chrome");
+
+        // Initialize the LoginPage object
+        loginPage = new LoginPage(getDriver());
+        homePage = new HomePage(getDriver());
+        adminPage = new AdminPage(getDriver());
     }
+
     @Test
     public void testAddNewUser() throws InterruptedException {
 
+        loginPage.openLoginPage(TestConstants.LOGIN_URL);
         // Log in to the application
         loginPage.login(TestConstants.USERNAME, TestConstants.PASSWORD);
 
@@ -37,22 +41,28 @@ public class AddNewUserTest {
         adminPage.clickAddUser();
 
         // Fill in the user details
-        adminPage.addUserRole("Admin");
+        adminPage.addUserRole();
+        Thread.sleep(2000);
         adminPage.enterAddEmployeeName();
-        adminPage.addStatus("Enabled");
+        Thread.sleep(2000);
+        adminPage.addStatus();
+        Thread.sleep(2000);
         adminPage.enterAddUsername();
-        adminPage.enterPassword("BernaSmith123");
-        adminPage.enterConfirmPassword("BernaSmith123");
+        Thread.sleep(2000);
+        adminPage.enterPassword("JamesButler123");
+        Thread.sleep(2000);
+        adminPage.enterConfirmPassword("JamesButler123");
+        Thread.sleep(2000);
         // Save the new user
         adminPage.saveUser();
         Thread.sleep(2000);
         boolean userAddedSuccessfully = adminPage.isUserAdded();
-        assert userAddedSuccessfully == true;
+        Assert.assertEquals(userAddedSuccessfully, true);
         adminPage.deleteUser();
 
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
