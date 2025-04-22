@@ -15,7 +15,8 @@ public class BaseClass {
     public void setUp(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
+            options.addArguments("--start-maximized");;
+            options.addArguments("--disable-lazy-loading");
             driver = new ChromeDriver(options);
         } else if (browser.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");

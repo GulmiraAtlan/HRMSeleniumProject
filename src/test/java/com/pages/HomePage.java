@@ -13,10 +13,14 @@ import org.openqa.selenium.WebDriver;
         // Locators for login page elements
         private By dashboardTitle = By.xpath("//div[@class='oxd-topbar-header-title']"); // Replace with the actual ID
         private By adminTab = By.xpath("//ul[@class='oxd-main-menu']/li[1]"); // Replace with the actual ID
+        private By recruitmentTab = By.xpath("//ul[@class='oxd-main-menu']/li[5]"); // Replace with the actual ID
         public String getDashboardTitleText() {
             return driver.findElement(dashboardTitle).getText();
         }
         public void clickAdminTab() {
             driver.findElement(adminTab).click();
+        }
+        public void clickRecruitmentTab() {
+            driver.findElement(recruitmentTab).click();
         }
 }

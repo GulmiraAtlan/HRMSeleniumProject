@@ -5,6 +5,7 @@ import com.base.BaseClass;
 import com.pages.LoginPage;
 import com.pages.AdminPage;
 import com.pages.HomePage;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -42,9 +43,9 @@ public class AddNewUserTest extends BaseClass{
 
         // Fill in the user details
         adminPage.addUserRole();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         adminPage.enterAddEmployeeName();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         adminPage.addStatus();
         Thread.sleep(2000);
         adminPage.enterAddUsername();
@@ -56,8 +57,8 @@ public class AddNewUserTest extends BaseClass{
         // Save the new user
         adminPage.saveUser();
         Thread.sleep(2000);
-        boolean userAddedSuccessfully = adminPage.isUserAdded();
-        Assert.assertEquals(userAddedSuccessfully, true);
+        boolean userIsAdded = adminPage.isUserAdded();
+        Assert.assertEquals(userIsAdded, true);
         adminPage.deleteUser();
 
     }

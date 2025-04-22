@@ -3,14 +3,20 @@ package com.pages;
 import com.data.TestConstants;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+import java.time.Duration;
 import java.util.List;
 
 public class AdminPage {
         private WebDriver driver;
+        private WebDriverWait wait;
 
         // Locators
         private By addUserButton = By.xpath("//div[@class='orangehrm-header-container']/button");
@@ -36,10 +42,13 @@ public class AdminPage {
         private By confirmPasswordField = By.xpath("//div[@class='oxd-form-row user-password-row']/div/div[2]//input[@type='password']");
         private By saveButton = By.xpath("//div[@class='oxd-form-actions']/button[2]");
 
-        private By tableRecords = By.xpath("//div[@class='oxd-table-body oxd-card-table-body']/div");
+        private By tableRecords = By.xpath("//div[@class='oxd-table-card']");
+        private By tableBody = By.xpath("//div[@class='oxd-table']");
+        private By deleteButton = By.xpath("//div[@role='document']//div[@class='orangehrm-modal-footer']/button[2]");
 
         public AdminPage(WebDriver driver) {
             this.driver = driver;
+            this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         }
 
         // Methods
@@ -92,23 +101,48 @@ public class AdminPage {
         public void clickSearch() {
             driver.findElement(searchButton).click();
         }
-        public boolean isUserAdded() {
-            List<WebElement> records = driver.findElements(tableRecords);
+
+       public void scrollToTable() {
+            WebElement table = driver.findElement(tableBody);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", table);
+        }
+
+       public boolean isUserAdded() throws InterruptedException {
+           Thread.sleep(2000);
+           scrollToTable();
+           String script = "return document.getElementsByClassName('oxd-table-card') !== null;";
+           Boolean exists = (Boolean) (((JavascriptExecutor) driver).executeScript(script));
+           System.out.println("Element exists: " + exists);
+           ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 1000);");
+
+           List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
+            System.out.println("Number of records found: " + records.size());
             for (WebElement record : records) {
-                if (record.getText().contains(TestConstants.EMPLOYEENAME)) {
+                System.out.println("Record text: " + record.getText());
+                if (record.getText().contains(TestConstants.NEWUSERNAME)) {
                     return true;
                 }
             }
-            return false;
+             return false;
+        }
+        public void confirmDelete() {
+            driver.findElement(deleteButton).click();
         }
         public void deleteUser() {
             List<WebElement> records = driver.findElements(tableRecords);
             for (WebElement record : records) {
-                if (record.getText().contains(TestConstants.EMPLOYEENAME)) {
-                    record.findElement(By.xpath("//button[1]")).click();
+                if (record.getText().contains(TestConstants.NEWUSERNAME)) {
+                    record.findElement(By.xpath(".//button[1]")).click();
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(deleteButton));
+                    confirmDelete();
                     break;
                 }
             }
         }
+    public void scrollBy(int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
+    }
+
     }
 
