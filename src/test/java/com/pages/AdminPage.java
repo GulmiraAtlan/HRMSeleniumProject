@@ -41,11 +41,10 @@ public class AdminPage {
         private By passwordField = By.xpath("//div[@class='oxd-form-row user-password-row']/div/div[1]//input[@type='password']");
         private By confirmPasswordField = By.xpath("//div[@class='oxd-form-row user-password-row']/div/div[2]//input[@type='password']");
         private By saveButton = By.xpath("//div[@class='oxd-form-actions']/button[2]");
-
         private By tableRecords = By.xpath("//div[@class='oxd-table-card']");
         private By tableBody = By.xpath("//div[@class='oxd-table']");
         private By deleteButton = By.xpath("//div[@role='document']//div[@class='orangehrm-modal-footer']/button[2]");
-
+        private By searchUserNameField = By.xpath("//div[@class='oxd-form-row']/div/div[1]//input");
         public AdminPage(WebDriver driver) {
             this.driver = driver;
             this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -79,8 +78,8 @@ public class AdminPage {
             driver.findElement(addUserStatusOptionEnabled).click();
         }
         public void enterAddEmployeeName() throws InterruptedException {
-            driver.findElement(addUserEmployeeNameField).sendKeys(TestConstants.EMPLOYEENAME);
-            Thread.sleep(5000);
+            driver.findElement(addUserEmployeeNameField).sendKeys("James");
+            Thread.sleep(2000);
             driver.findElement(addEmployeeNameOption).click();
         }
         public void enterAddUsername() {
@@ -102,12 +101,12 @@ public class AdminPage {
             driver.findElement(searchButton).click();
         }
 
-       public void scrollToTable() {
+        public void scrollToTable() {
             WebElement table = driver.findElement(tableBody);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", table);
         }
 
-       public boolean isUserAdded() throws InterruptedException {
+        public boolean isUserAdded() throws InterruptedException {
            Thread.sleep(2000);
            scrollToTable();
            String script = "return document.getElementsByClassName('oxd-table-card') !== null;";
@@ -139,10 +138,23 @@ public class AdminPage {
                 }
             }
         }
-    public void scrollBy(int x, int y) {
+        public void scrollBy(int x, int y) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
-    }
+        }
 
-    }
+        public void searchUser(String username) {
+            driver.findElement(searchUserNameField).sendKeys(username);
+            clickSearch();
+        }
+        public boolean isUserFound(String username) {
+            List<WebElement> records = driver.findElements(tableRecords);
+            for (WebElement record : records) {
+                if (record.getText().contains(username)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+}
 
