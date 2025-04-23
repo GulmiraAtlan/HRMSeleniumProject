@@ -1,0 +1,10 @@
+com/pages/AdminPage.class
+com/data/TestConstants.class
+com/base/BaseClass.class
+com/end2endTests/SearchUserTest.class
+com/end2endTests/LoginTest.class
+com/pages/RecruitmentPage.class
+com/pages/HomePage.class
+com/pages/LoginPage.class
+com/end2endTests/AddCandidateTest.class
+com/end2endTests/AddNewUserTest.class
