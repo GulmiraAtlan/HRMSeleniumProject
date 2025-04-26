@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="352.474" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/test-classes:/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/classes:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/Users/gulmire/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/Users/gulmire/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/Users/gulmire/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/Users/gulmire/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/gulmire/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/gulmire/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/gulmire/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/Users/gulmire/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/Users/gulmire/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/Users/gulmire/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/gulmire/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/gulmire/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/gulmire/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/surefire/surefirebooter-20250425233134640_3.jar /Users/gulmire/IdeaProjects/HRMSeleniumProject/target/surefire 2025-04-25T23-31-34_599-jvmRun1 surefire-20250425233134640_1tmp surefire_0-20250425233134640_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/test-classes:/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/classes:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-java/4.31.0/selenium-java-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-api/4.31.0/selenium-api-4.31.0.jar:/Users/gulmire/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.31.0/selenium-chrome-driver-4.31.0.jar:/Users/gulmire/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.31.0/selenium-chromium-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-json/4.31.0/selenium-json-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.31.0/selenium-manager-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v133/4.31.0/selenium-devtools-v133-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v134/4.31.0/selenium-devtools-v134-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v135/4.31.0/selenium-devtools-v135-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.31.0/selenium-edge-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.31.0/selenium-firefox-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-http/4.31.0/selenium-http-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.31.0/selenium-ie-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.31.0/selenium-remote-driver-4.31.0.jar:/Users/gulmire/.m2/repository/com/google/guava/guava/33.4.6-jre/guava-33.4.6-jre.jar:/Users/gulmire/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/gulmire/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/gulmire/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/gulmire/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-api/1.48.0/opentelemetry-api-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-context/1.48.0/opentelemetry-context-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.48.0/opentelemetry-exporter-logging-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.48.0/opentelemetry-sdk-common-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.48.0/opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.48.0/opentelemetry-sdk-extension-autoconfigure-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.48.0/opentelemetry-sdk-trace-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.48.0/opentelemetry-sdk-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.48.0/opentelemetry-sdk-metrics-1.48.0.jar:/Users/gulmire/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.48.0/opentelemetry-sdk-logs-1.48.0.jar:/Users/gulmire/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-os/4.31.0/selenium-os-4.31.0.jar:/Users/gulmire/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.31.0/selenium-safari-driver-4.31.0.jar:/Users/gulmire/.m2/repository/org/seleniumhq/selenium/selenium-support/4.31.0/selenium-support-4.31.0.jar:/Users/gulmire/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/Users/gulmire/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/Users/gulmire/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/Users/gulmire/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/gulmire"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject/target/surefire/surefirebooter-20250425233134640_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20.0.2+9-78"/>
+    <property name="user.name" value="gulmire"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/gulmire/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/fm/2gqsg7g14n73dls9tkmm18440000gn/T/"/>
+    <property name="java.version" value="20.0.2"/>
+    <property name="user.dir" value="/Users/gulmire/IdeaProjects/HRMSeleniumProject"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/gulmire/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="20.0.2+9-78"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="testInvalidLogin" classname="com.end2endTests.LoginTest" time="18.05">
+    <system-out><![CDATA[Error message: Invalid credentials
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testSuccessfulLogin" classname="com.end2endTests.LoginTest" time="29.149">
+    <system-out><![CDATA[Page title after login: Dashboard
+]]></system-out>
+  </testcase>
+  <testcase name="testAddNewUser" classname="com.end2endTests.AddNewUserTest" time="83.077">
+    <system-out><![CDATA[Element exists: true
+Number of records found: 10
+Record text: Admin
+管理员
+manda user
+启用
+Record text: Automation test_26_04_2025_12_59_51
+ESS
+yedghjb1 90jsnd
+启用
+Record text: Automation test_26_04_2025_13_05_06
+ESS
+yedghjb1 90jsnd
+启用
+Record text: FMLName
+ESS
+Qwerty LName
+启用
+Record text: FMLName1
+ESS
+FName LName
+启用
+Record text: hellwe32
+ESS
+monkey Luffy
+启用
+Record text: Jobinsam@6742
+ESS
+Jobin Sam
+启用
+Record text: jojo1
+ESS
+siva selvi
+禁用
+Record text: Kuphal, Legros and Mills
+管理员
+Orange Test
+禁用
+Record text: TestGul
+管理员
+James Butler
+启用
+]]></system-out>
+  </testcase>
+  <testcase name="testAddCandidates" classname="com.end2endTests.AddCandidateTest" time="88.783">
+    <system-out><![CDATA[Element exists: true
+Number of records found: 2
+Record text: 04-26-2025
+manda akhil user assigned the job vacancy Senior QA Lead
+Record text: 04-26-2025
+manda akhil user added TestFirst TestLast
+]]></system-out>
+  </testcase>
+  <testcase name="testSearchUser" classname="com.end2endTests.SearchUserTest" time="79.867"/>
+</testsuite>

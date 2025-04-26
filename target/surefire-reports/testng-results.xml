@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-25T23:31:34 PDT" name="Test Suite" finished-at="2025-04-25T23:37:27 PDT" duration-ms="352201">
+    <groups>
+    </groups>
+    <test started-at="2025-04-25T23:31:34 PDT" name="Test" finished-at="2025-04-25T23:37:27 PDT" duration-ms="352201">
+      <class name="com.end2endTests.AddCandidateTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.end2endTests.AddCandidateTest@363ee3a2]" started-at="2025-04-25T23:34:17 PDT" name="setUp" finished-at="2025-04-25T23:34:28 PDT" duration-ms="10931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddCandidates()[pri:0, instance:com.end2endTests.AddCandidateTest@363ee3a2]" started-at="2025-04-25T23:34:28 PDT" name="testAddCandidates" finished-at="2025-04-25T23:35:57 PDT" duration-ms="88781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCandidates -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:com.end2endTests.AddCandidateTest@363ee3a2]" started-at="2025-04-25T23:35:57 PDT" name="tearDownMethod" finished-at="2025-04-25T23:35:57 PDT" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- com.end2endTests.AddCandidateTest -->
+      <class name="com.end2endTests.AddNewUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.end2endTests.AddNewUserTest@4386f16]" started-at="2025-04-25T23:32:44 PDT" name="setUp" finished-at="2025-04-25T23:32:54 PDT" duration-ms="9814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddNewUser()[pri:0, instance:com.end2endTests.AddNewUserTest@4386f16]" started-at="2025-04-25T23:32:54 PDT" name="testAddNewUser" finished-at="2025-04-25T23:34:17 PDT" duration-ms="83076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewUser -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:com.end2endTests.AddNewUserTest@4386f16]" started-at="2025-04-25T23:34:17 PDT" name="tearDownMethod" finished-at="2025-04-25T23:34:17 PDT" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- com.end2endTests.AddNewUserTest -->
+      <class name="com.end2endTests.SearchUserTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.end2endTests.SearchUserTest@4690b489]" started-at="2025-04-25T23:35:57 PDT" name="setUp" finished-at="2025-04-25T23:36:07 PDT" duration-ms="9775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSearchUser()[pri:0, instance:com.end2endTests.SearchUserTest@4690b489]" started-at="2025-04-25T23:36:07 PDT" name="testSearchUser" finished-at="2025-04-25T23:37:26 PDT" duration-ms="79865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchUser -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.end2endTests.SearchUserTest@4690b489]" started-at="2025-04-25T23:37:26 PDT" name="tearDownTest" finished-at="2025-04-25T23:37:27 PDT" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- com.end2endTests.SearchUserTest -->
+      <class name="com.end2endTests.LoginTest">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:31:34 PDT" name="setUpTest" finished-at="2025-04-25T23:31:47 PDT" duration-ms="12158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testInvalidLogin()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:31:47 PDT" name="testInvalidLogin" finished-at="2025-04-25T23:32:05 PDT" duration-ms="18050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:32:05 PDT" name="tearDownTest" finished-at="2025-04-25T23:32:05 PDT" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:32:05 PDT" name="setUpTest" finished-at="2025-04-25T23:32:15 PDT" duration-ms="9786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testSuccessfulLogin()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:32:15 PDT" name="testSuccessfulLogin" finished-at="2025-04-25T23:32:44 PDT" duration-ms="29134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSuccessfulLogin -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.end2endTests.LoginTest@4e91d63f]" started-at="2025-04-25T23:32:44 PDT" name="tearDownTest" finished-at="2025-04-25T23:32:44 PDT" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- com.end2endTests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Test Suite -->
+</testng-results>
