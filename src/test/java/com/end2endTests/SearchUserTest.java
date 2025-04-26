@@ -5,9 +5,7 @@ import com.pages.LoginPage;
 import com.pages.AdminPage;
 import com.pages.HomePage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 public class SearchUserTest extends BaseClass {
@@ -65,8 +63,8 @@ public class SearchUserTest extends BaseClass {
     }
 
     @AfterMethod
-    public void tearDown() {
-        // Close the browser after each test method
-        getDriver().quit();
+    public void tearDownTest() {
+        // Close the browser
+        tearDown();
     }
 }

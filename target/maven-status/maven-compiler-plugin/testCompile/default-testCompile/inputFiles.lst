@@ -1,10 +1,10 @@
-/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/base/BaseClass.java
-/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/data/TestConstants.java
+/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/pages/AdminPage.java
+/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/end2endTests/LoginTest.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/end2endTests/AddCandidateTest.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/end2endTests/AddNewUserTest.java
-/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/end2endTests/LoginTest.java
+/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/data/TestConstants.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/end2endTests/SearchUserTest.java
-/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/pages/AdminPage.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/pages/HomePage.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/pages/LoginPage.java
+/Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/base/BaseClass.java
 /Users/gulmire/IdeaProjects/HRMSeleniumProject/src/test/java/com/pages/RecruitmentPage.java

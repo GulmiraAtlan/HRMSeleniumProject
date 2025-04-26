@@ -7,9 +7,7 @@ import com.pages.RecruitmentPage;
 import com.pages.HomePage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 public class AddCandidateTest extends BaseClass{
@@ -62,9 +60,9 @@ public class AddCandidateTest extends BaseClass{
         recruitmentPage.deleteUser();
     }
     @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+    public void tearDownMethod() {
+        // Close the browser
+        tearDown();
     }
 }
+

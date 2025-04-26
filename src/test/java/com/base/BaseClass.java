@@ -33,9 +33,14 @@ public class BaseClass {
     }
 
     // Method to close the browser
+
     public void tearDown() {
         if (driver != null) {
-            driver.quit();
+            try {
+                getDriver().quit(); // Properly close the browser
+            } catch (Exception e) {
+                System.err.println("Error while closing the browser: " + e.getMessage());
+            }
         }
     }
 

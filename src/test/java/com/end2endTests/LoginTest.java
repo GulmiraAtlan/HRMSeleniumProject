@@ -2,9 +2,7 @@ package com.end2endTests;
 
 import com.base.BaseClass;
 import com.data.TestConstants;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import com.pages.HomePage;
 import com.pages.LoginPage;
 
@@ -60,6 +58,6 @@ public class LoginTest extends BaseClass {
             // Close the browser
             tearDown();
         }
-    }
+}
 
 

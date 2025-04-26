@@ -47,7 +47,7 @@ public class AdminPage {
         private By searchUserNameField = By.xpath("//div[@class='oxd-form-row']/div/div[1]//input");
         public AdminPage(WebDriver driver) {
             this.driver = driver;
-            this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         }
 
         // Methods
@@ -108,7 +108,6 @@ public class AdminPage {
 
         public boolean isUserAdded() throws InterruptedException {
            Thread.sleep(2000);
-           scrollToTable();
            String script = "return document.getElementsByClassName('oxd-table-card') !== null;";
            Boolean exists = (Boolean) (((JavascriptExecutor) driver).executeScript(script));
            System.out.println("Element exists: " + exists);
@@ -148,7 +147,8 @@ public class AdminPage {
             clickSearch();
         }
         public boolean isUserFound(String username) {
-            List<WebElement> records = driver.findElements(tableRecords);
+
+            List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
             for (WebElement record : records) {
                 if (record.getText().contains(username)) {
                     return true;

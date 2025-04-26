@@ -9,5 +9,8 @@
         <module name="HRMSelenium" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HRMSeleniumProject" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
