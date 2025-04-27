@@ -1,6 +1,9 @@
 package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class LoginPage {
     private WebDriver driver;
@@ -10,6 +13,7 @@ public class LoginPage {
         this.driver = driver;
     }
 
+
     // Locators for login page elements
     private By usernameField = By.xpath("//input[@name='username']"); // Replace with the actual ID
     private By passwordField = By.xpath("//input[@name='password']"); // Replace with the actual ID
@@ -18,6 +22,7 @@ public class LoginPage {
 
     private By errorMessage = By.xpath("//div[@role='alert']");
     // Actions on the login page
+    private static final Logger logger = LogManager.getLogger(AdminPage.class);
 
     // Open the login page
     public void openLoginPage(String url) {
@@ -46,8 +51,14 @@ public class LoginPage {
 
     // Perform login with a single method
     public void login(String username, String password) {
-        enterUsername(username);
-        enterPassword(password);
-        clickLoginButton();
+        logger.info("User is logging in with username: " + username);
+        try {
+            enterUsername(username);
+            enterPassword(password);
+            clickLoginButton();
+        } catch (Exception e) {
+            logger.error("Error during login: " + e.getMessage());
+        }
     }
 }
+

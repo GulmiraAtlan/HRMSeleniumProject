@@ -2,6 +2,7 @@ package com.end2endTests;
 
 import com.base.BaseClass;
 import com.data.TestConstants;
+import com.data.TestConstantsLoader;
 import org.testng.annotations.*;
 import com.pages.HomePage;
 import com.pages.LoginPage;
@@ -23,6 +24,8 @@ public class LoginTest extends BaseClass {
 
         @Test
         public void testSuccessfulLogin() {
+            String loginUrl = TestConstantsLoader.get("LOGIN_URL");
+            System.out.println("Login URL: " + loginUrl);
             // Open the login page
             loginPage.openLoginPage(TestConstants.LOGIN_URL);
 

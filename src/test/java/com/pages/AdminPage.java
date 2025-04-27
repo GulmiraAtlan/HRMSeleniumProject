@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 import java.time.Duration;
@@ -49,6 +51,9 @@ public class AdminPage {
             this.driver = driver;
             this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
         }
+
+
+        private static final Logger logger = LogManager.getLogger(AdminPage.class);
 
         // Methods
         public void clickAddUser() {
@@ -107,22 +112,29 @@ public class AdminPage {
         }
 
         public boolean isUserAdded() throws InterruptedException {
-           Thread.sleep(2000);
-           String script = "return document.getElementsByClassName('oxd-table-card') !== null;";
-           Boolean exists = (Boolean) (((JavascriptExecutor) driver).executeScript(script));
-           System.out.println("Element exists: " + exists);
-           ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 1000);");
+            logger.debug("Checking if the user is added");
+            try {
+                String script = "return document.getElementsByClassName('oxd-table-card') !== null;";
+                Boolean exists = (Boolean) (((JavascriptExecutor) driver).executeScript(script));
+                System.out.println("Element exists: " + exists);
+                ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 1000);");
 
-           List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
-            System.out.println("Number of records found: " + records.size());
-            for (WebElement record : records) {
-                System.out.println("Record text: " + record.getText());
-                if (record.getText().contains(TestConstants.NEWUSERNAME)) {
-                    return true;
+                List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
+                System.out.println("Number of records found: " + records.size());
+                for (WebElement record : records) {
+                    System.out.println("Record text: " + record.getText());
+                    if (record.getText().contains(TestConstants.NEWUSERNAME)) {
+                        return true;
+                    }
                 }
+            } catch (Exception e) {
+                System.out.println("Error occurred while checking if the user is added: " + e.getMessage());
             }
-             return false;
-        }
+                return false;
+            }
+
+
+
         public void confirmDelete() {
             driver.findElement(deleteButton).click();
         }
@@ -147,12 +159,16 @@ public class AdminPage {
             clickSearch();
         }
         public boolean isUserFound(String username) {
-
-            List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
-            for (WebElement record : records) {
-                if (record.getText().contains(username)) {
-                    return true;
+            logger.debug("Checking if the user is found");
+            try {
+                List<WebElement> records = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(tableRecords));
+                for (WebElement record : records) {
+                    if (record.getText().contains(username)) {
+                        return true;
+                    }
                 }
+            } catch (Exception e) {
+                System.out.println("Error occurred while checking if the user is found: " + e.getMessage());
             }
             return false;
         }

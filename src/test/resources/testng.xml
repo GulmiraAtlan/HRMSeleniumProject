@@ -10,3 +10,6 @@
         </classes>
     </test>
 </suite>
+<listeners>
+<listener class-name="com.listeners.TestListener" />
+</listeners>

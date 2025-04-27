@@ -34,27 +34,17 @@ public class SearchUserTest extends BaseClass {
         homePage.clickAdminTab();
         // Click on the Add button
         adminPage.clickAddUser();
-
         // Fill in the user details
         adminPage.addUserRole();
-        Thread.sleep(5000);
         adminPage.enterAddEmployeeName();
-        Thread.sleep(2000);
         adminPage.addStatus();
-        Thread.sleep(2000);
         adminPage.enterAddUsername();
-        Thread.sleep(2000);
         adminPage.enterPassword("JamesButler123");
-        Thread.sleep(2000);
         adminPage.enterConfirmPassword("JamesButler123");
-        Thread.sleep(2000);
-
         // Save the new user
         adminPage.saveUser();
-
         // Search for the user
         adminPage.searchUser(TestConstants.NEWUSERNAME);
-
         // Verify that the user is found
         boolean isUserFound = adminPage.isUserFound(TestConstants.NEWUSERNAME);
 
