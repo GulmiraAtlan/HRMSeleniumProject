@@ -8,15 +8,18 @@ import com.pages.HomePage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class AddNewUserTest extends BaseClass{
+    private static final Logger logger = LogManager.getLogger(AddNewUserTest.class);
     private LoginPage loginPage;
     private AdminPage adminPage;
     private HomePage homePage;
 
     @BeforeMethod
     public void setUp() {
-
+        logger.info("Setting up the test environment.");
         // Initialize WebDriver from BaseClass
         setUp("chrome");
 
@@ -41,22 +44,18 @@ public class AddNewUserTest extends BaseClass{
 
         // Fill in the user details
         adminPage.addUserRole();
-        Thread.sleep(5000);
         adminPage.enterAddEmployeeName();
-        Thread.sleep(5000);
         adminPage.addStatus();
-        Thread.sleep(2000);
         adminPage.enterAddUsername();
-        Thread.sleep(2000);
         adminPage.enterPassword("JamesButler123");
-        Thread.sleep(2000);
         adminPage.enterConfirmPassword("JamesButler123");
-        Thread.sleep(2000);
         // Save the new user
         adminPage.saveUser();
-        Thread.sleep(2000);
+
         boolean userIsAdded = adminPage.isUserAdded();
         Assert.assertEquals(userIsAdded, true);
+        logger.info("User added successfully.");
+
         adminPage.deleteUser();
 
     }

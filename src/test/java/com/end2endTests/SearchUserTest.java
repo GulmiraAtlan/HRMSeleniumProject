@@ -6,9 +6,11 @@ import com.pages.AdminPage;
 import com.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class SearchUserTest extends BaseClass {
+    private static final Logger logger = LogManager.getLogger(SearchUserTest.class);
     private LoginPage loginPage;
     private AdminPage adminPage;
     private HomePage homePage;
@@ -26,6 +28,7 @@ public class SearchUserTest extends BaseClass {
 
     @Test
     public void testSearchUser() throws InterruptedException {
+        logger.info("Starting test: testSearchUser");
         loginPage.openLoginPage(TestConstants.LOGIN_URL);
         // Log in to the application
         loginPage.login(TestConstants.USERNAME, TestConstants.PASSWORD);
@@ -43,12 +46,14 @@ public class SearchUserTest extends BaseClass {
         adminPage.enterConfirmPassword("JamesButler123");
         // Save the new user
         adminPage.saveUser();
+        logger.info("Searching for the newly added user.");
         // Search for the user
         adminPage.searchUser(TestConstants.NEWUSERNAME);
         // Verify that the user is found
         boolean isUserFound = adminPage.isUserFound(TestConstants.NEWUSERNAME);
 
         Assert.assertTrue(isUserFound, "User was not found after adding.");
+        logger.info("User found successfully. Proceeding to delete the user.");
         adminPage.deleteUser();
     }
 

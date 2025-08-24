@@ -6,10 +6,13 @@ import com.data.TestConstantsLoader;
 import org.testng.annotations.*;
 import com.pages.HomePage;
 import com.pages.LoginPage;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends BaseClass {
+        private static final Logger logger = LogManager.getLogger(LoginTest.class);
         private LoginPage loginPage;
         private HomePage homePage;
         @BeforeMethod
@@ -40,6 +43,7 @@ public class LoginTest extends BaseClass {
             String dashBoardTitle = homePage.getDashboardTitleText();
             System.out.println("Page title after login: " + dashBoardTitle);
             assertEquals(dashBoardTitle, "Dashboard");
+            logger.info("Login test passed successfully.");
         }
 
         @Test

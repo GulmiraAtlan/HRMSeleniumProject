@@ -1,5 +1,7 @@
 package com.base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,10 +11,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.time.Duration;
 
 public class BaseClass {
+    private static final Logger logger = LogManager.getLogger(BaseClass.class);
     protected WebDriver driver;
 
     // Method to initialize WebDriver based on the browser type
     public void setUp(String browser) {
+        logger.info("Setting up WebDriver for browser: " + browser);
+
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");;
