@@ -22,7 +22,7 @@ public class LoginPage {
 
     private By errorMessage = By.xpath("//div[@role='alert']");
     // Actions on the login page
-    private static final Logger logger = LogManager.getLogger(AdminPage.class);
+    private static final Logger logger = LogManager.getLogger(LoginPage.class);
 
     // Open the login page
     public void openLoginPage(String url) {
